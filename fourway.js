@@ -48,4 +48,17 @@ $(document).ready(function(){
   });
 });
 
+// Method 4: Axios
+
+const swansonAxios = function(){
+  axios.get(api)
+  .then(function(res){
+    quoteDiv.innerHTML = res.data;
+  })
+  .catch(function(err){
+    console.log("ERROR: ", err);
+  });
+}
+
+document.getElementById("getA").addEventListener("click", swansonAxios);
 
