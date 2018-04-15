@@ -15,12 +15,13 @@ button {
   width: 160px;
   background-color: firebrick;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   color: papayawhip;
+  box-shadow: 2px 2px 1px #555;
 }
 
 button:hover {
-  background-color: #ca3a3a;
+  background-color: #ca5339;
   cursor: pointer;
 }
 

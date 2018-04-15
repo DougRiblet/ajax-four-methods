@@ -38,3 +38,14 @@ const swansonFetch = function(){
 
 document.getElementById("getF").addEventListener("click", swansonFetch);
 
+// Method 3: jQuery
+
+$(document).ready(function(){
+  $("#getJ").click(function(){
+    $.get(api, function(data){
+      quoteDiv.innerHTML = data;
+    });
+  });
+});
+
+
