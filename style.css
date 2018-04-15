@@ -1,0 +1,30 @@
+body, div {
+  text-align: center;
+}
+
+#button-row {
+  margin: 30px auto 60px;
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+}
+
+button {
+  height: 40px;
+  width: 160px;
+  background-color: firebrick;
+  border: none;
+  border-radius: 8px;
+  color: papayawhip;
+}
+
+button:hover {
+  background-color: #c63333;
+}
+
+#quote {
+  font-size: 150%;
+  width: 600px;
+  margin: 0 auto;
+}
