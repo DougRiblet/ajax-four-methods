@@ -1,12 +1,12 @@
 
-// Four methods for retrieving AJAX data
+// Exercise: Four methods for retrieving AJAX data
 
 const api = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
 let quoteDiv = document.getElementById("quote");
 
 // Method 1: XMLHttpRequest
 
-const swanX = function(){
+const swansonXHR = function(){
   let XHR = new XMLHttpRequest();
 
   XHR.onreadystatechange = function(){
@@ -20,9 +20,21 @@ const swanX = function(){
   XHR.send();
 }
 
-document.getElementById("getX").addEventListener("click", swanX);
+document.getElementById("getX").addEventListener("click", swansonXHR);
 
+// Method 2: Fetch
 
+const swansonFetch = function(){
+  fetch(api, {
+    method: 'GET'
+  })
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    quoteDiv.innerHTML = data;
+  });
+}
 
-
+document.getElementById("getF").addEventListener("click", swansonFetch);
 
