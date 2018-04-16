@@ -10,7 +10,7 @@ const swansonXHR = function(){
   let XHR = new XMLHttpRequest();
 
   XHR.onreadystatechange = function(){
-    if(XHR.readyState == 4 && XHR.status == 200) {
+    if(XHR.readyState === 4 && XHR.status === 200) {
       let newQuote = JSON.parse(XHR.responseText);
       quoteDiv.innerHTML = newQuote;
     }
